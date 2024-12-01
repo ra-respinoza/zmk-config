@@ -32,9 +32,9 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp TAB   &trans &trans &trans &trans    &kp C_PWR       &kp K_VOL_UP &trans         &kp UP       &trans     &kp END    &kp BSPC
-   &kp LCTRL &trans &trans &LALT  &kp LGUI  &trans          &kp K_VOL_DN &kp LEFT       &kp DOWN     &kp RIGHT  &kp HOME   &kp DEL
-   &kp LSHFT &trans &trans &trans &trans    &trans          &kp K_PP     &kp K_PREV     &kp K_NEXT   &trans     &trans     &kp ESC
+   &kp TAB    &trans    &trans      &trans       &trans       &kp C_PWR         &kp N6   &kp N7   &kp UP   &kp N9    &kp N0 &kp BSPC
+   &bt LCTRL  &trans    &trans      &kp LALT     &kp LGUI     &trans            &trans   &kp LEFT &kp DOWN &kp RIGHT &trans &trans
+   &kp LSHFT  &trans    &trans      &trans       &trans       &trans            &trans   &trans   &trans   &trans    &trans &trans
                   &kp LGUI     &trans       &kp SPACE       &kp RET  &trans   &kp RALT
                         >;
                 };
