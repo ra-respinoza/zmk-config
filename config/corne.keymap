@@ -1,55 +1,69 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
 / {
-    keymap {
-        compatible = "zmk,keymap";
+        keymap {
+                compatible = "zmk,keymap";
 
-        default_layer {
-            bindings = < 
-                &kp TAB   &kp QUOT   &kp COMM   &kp DOT   &kp P      &kp Y
-                &kp LCTL  &kp A      &kp O      &kp E     &kp U      &kp I
-                &kp LSFT  &kp SCLN   &kp Q      &kp J     &kp K      &kp X
-                &kp LGUI  &mo 1      &mo 2      &kp BSPC  &kp L      &kp R
-                &kp C     &kp G      &kp F      &kp RCTL  &kp S      &kp N
-                &kp T     &kp H      &kp D      &mt(MOD_LSFT|MOD_RSFT, KC_SLSH) &kp Z &kp V
-                &kp W     &kp M      &kp B      &kp RALT  &lt(3, KC_ENT) &kp SPC
-            >;
-        };
+                default_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+                        bindings = <
+   &kp TAB   &kp SQT  &kp COMMA &kp DOT &kp P &kp Y     &kp F &kp G  &kp C     &kp R   &kp L    &kp BSPC
+   &kp LCTRL &kp A    &kp O     &kp E   &kp U &kp I     &kp D &kp H  &kp T     &kp N   &kp S    &kp RCTRL
+   &kp LSHFT &kp SEMI &kp Q     &kp J   &kp K &kp X     &kp B &kp M  &kp W     &kp V   &kp Z    &kp FSLH
+                  &kp LGUI &mo 1 &mo 2                  &kp RET  &mo 3 &kp RALT
+                        >;
+                };
+                lower_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+   &kp TAB    &trans    &trans      &trans       &trans       &kp C_PWR         &trans     &trans       &kp UP      &trans    &kp END  &kp BSPC
+   &bt LCTRL  &trans    &trans      &kp LALT     &kp LGUI     &trans            &trans     &kp LEFT     &kp DOWN    &kp RIGHT &kp HOME &kp DEL
+   &kp LSHFT  &trans    &trans      &trans       &trans       &trans            &kp K_PP   &kp K_PREV   &kp K_NEXT  &trans    &trans   &kp FSLH
+                  &kp LGUI     &trans       &kp SPACE       &kp RET  &trans   &kp RALT
+                        >;
+                };
 
-        lower_layer {
-            bindings = <
-                &kp TRNS  &none      &none      &none     &none     &kp C_PWR
-                &kp TRNS  &none      &none      &kp LALT  &kp LGUI  &none
-                &kp TRNS  &none      &none      &none     &none     &none
-                &kp TRNS  &kp TRNS   &kp TRNS   &kp TRNS  &kp END   &none
-                &kp UP    &none      &kp VOLU   &kp DEL   &kp HOME  &kp RGHT
-                &kp DOWN  &kp LEFT   &kp VOLD   &kp TRNS  &none     &none
-                &kp MNXT  &kp MPRV   &kp MPLY   &none     &none     &none
-                &kp TRNS  &kp TRNS   &kp TRNS
-            >;
+                raise_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
+// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+   &kp TAB   &trans   &trans &trans    &trans     &trans      &kp KP_DIVIDE   &kp KP_N7 &kp KP_N8  &kp KP_N9 &kp KP_MINUS &kp BSPC
+   &kp LCTRL &trans   &trans &kp LALT  &kp LGUI   &trans      &kp KP_MULTIPLY &kp KP_N4 &kp KP_N5  &kp KP_N6 &kp KP_PLUS  &kp RCTRL
+   &kp LSHFT &trans   &trans &trans    &trans     &trans      &kp KP_N0       &kp KP_N1 &kp KP_N2  &kp KP_N3 &kp KP_DOT   &kp FSLH
+                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+                        >;
+                };
+                new_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+                        bindings = <
+   &kp TAB   &kp SQT  &kp COMMA &kp DOT &kp P &kp Y     &kp F &kp G  &kp C     &kp R   &kp L    &kp BSPC
+   &kp LCTRL &kp A    &kp O     &kp E   &kp U &kp I     &kp D &kp H  &kp T     &kp N   &kp S    &kp RCTRL
+   &kp LSHFT &kp SEMI &kp Q     &kp J   &kp K &kp X     &kp B &kp M  &kp W     &kp V   &kp Z    &kp FSLH
+                  &kp LGUI &mo 1 &mo 1  &kp RET         &mo 3 &kp RALT
+                        >;
+                };
         };
-
-        raise_layer {
-            bindings = <
-                &kp TRNS  &none      &none      &none     &kp F5    &none
-                &kp TRNS  &none      &none      &kp LALT  &kp LGUI  &kp PSCR
-                &kp TRNS  &none      &none      &none     &none     &none
-                &kp TRNS  &kp TRNS   &kp TRNS   &kp TRNS  &kp MINS  &kp P9
-                &kp P8    &kp P7     &kp PSLS   &kp TRNS  &kp PPLS  &kp P6
-                &kp P5    &kp P4     &kp PAST   &kp TRNS  &kp PDOT  &kp P3
-                &kp P2    &kp P1     &kp P0     &none     &none     &none
-                &kp TRNS  &kp TRNS   &kp TRNS
-            >;
-        };
-
-        new_layer {
-            bindings = <
-                &kp TRNS  &none      &none      &s(KC_9)  &s(KC_0)  &s(KC_BSLS)
-                &kp TRNS  &none      &s(KC_1)   &s(KC_LBRC) &s(KC_RBRC) &kp EQL
-                &kp TRNS  &none      &none      &kc LBRC   &kc RBRC &s(KC_7)
-                &kp TRNS  &kp TRNS   &kp TRNS   &kp TRNS   &s(KC_5)  &s(KC_4)
-                &s(KC_3)  &s(KC_2)   &s(KC_GRV) &kp TRNS   &none     &none
-                &macro_4  &macro_2   &macro_0   &kp TRNS   &none     &none
-                &macro_3  &macro_1   &none      &none      &kp TRNS
-            >;
-        };
-    };
 };
