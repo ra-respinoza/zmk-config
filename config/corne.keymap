@@ -60,7 +60,7 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB   &trans   &trans     &kp LPAR    &kp RPAR    &kp PIPE      &kp F &kp G  &kp C     &kp R   &kp L    &kp BSPC
+   &kp TAB   &trans   &trans     &kp LPAR    &kp RPAR    &kp PIPE      &kp TILDE2 &kp AT  &kp HASH     &kp DLLR   &kp PRCNT    &kp BSPC
    &kp LCTRL &trans   &kp EXCL   &kp LBRC    &kp RBRC    &kp EQUAL     &kp D &kp H  &kp T     &kp N   &kp S    &kp RCTRL
    &kp LSHFT &trans   &trans     &kp LBKT    &kp RBKT    &kp AMPS      &kp B &kp M  &kp W     &kp V   &kp Z    &kp FSLH
                         &kp LGUI &mo 1 &mo 2                           &kp SPACE    &lt 3 SPACE &kp RALT
