@@ -14,7 +14,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <
-                &macro_tap &kp H &kp O &kp L &kp A  // Escribe H, O, L, A
+                &kp H &kp O &kp L &kp A  // Escribe H, O, L, A
             >;
         };
     };
