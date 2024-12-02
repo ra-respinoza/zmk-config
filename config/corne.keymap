@@ -90,7 +90,7 @@
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp TAB   &none   &trans &none    &none     &none      &kp KP_DIVIDE   &kp KP_N7 &kp KP_N8  &kp KP_N9 &kp KP_MINUS &kp BSPC
+   &kp TAB   &none   &trans &none    &none     &none      &kp KP_DIVIDE   &kp KP_N7 &kp KP_N8  &kp KP_N9 &kp MINUS &kp BSPC
    &kp LCTRL &none   &none  &kp LALT &kp LGUI  &none      &kp KP_MULTIPLY &kp KP_N4 &kp KP_N5  &kp KP_N6 &kp KP_PLUS  &kp RCTRL
    &kp LSHFT &trans  &none  &none    &none     &none      &kp KP_N0       &kp KP_N1 &kp KP_N2  &kp KP_N3 &kp KP_DOT   &mt RSHFT FSLH
                         &kp LGUI &mo 1 &mo 2              &kp SPACE    &lt 3 RET &kp RALT
