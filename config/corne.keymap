@@ -14,7 +14,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>; // No requiere parámetros
             bindings = < 
-                &kp R &kp O &kp G &kp E &kp R &kp 0 &kp . &kp E &kp S &kp P &kp I &kp N &kp O &kp S &kp A &kp 1 &kp @ &kp G &kp M &kp A &kp I &kp L &kp . &kp C &kp O &kp M &kp 1
+                &kp R &kp O &kp G &kp E &kp R &kp 0 &kp DOT &kp E &kp S &kp P &kp I &kp N &kp O &kp Z &kp A &kp 1 &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M
             >;
         };
 
@@ -23,7 +23,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>; // No requiere parámetros
             bindings = <
-                &kp R &kp O &kp G &kp E &kp R &kp . &kp E &kp S &kp P &kp I &kp N &kp O &kp S &kp A &kp D &kp E &kp V &kp E &kp L &kp O &kp P &kp E &kp R &kp . &kp G &kp M &kp A &kp I &kp L &kp . &kp C &kp O &kp M &kp 1
+                &kp R &kp O &kp G &kp E &kp R &kp DOT &kp E &kp S &kp P &kp I &kp N &kp O &kp Z &kp A &kp DOT &kp D &kp E &kp V &kp E &kp L &kp O &kp P &kp E &kp R &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M
             >;
         };
     };
