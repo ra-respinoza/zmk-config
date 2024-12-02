@@ -20,7 +20,7 @@
         clave_2: clave_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>; // No requiere parámetros
-            bindings = < t$8L0O5}8M
+            bindings = < 
                 &kp T &kp DLLR &kp KP_N8 &kp L &kp KP_N0 &kp O &kp KP_N5 &kp RBRC &kp KP_N8 &kp M
             >;
         };
