@@ -25,6 +25,14 @@
             >;
         };
 
+        clave_3: clave_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>; // No requiere parámetros
+            bindings = < rE1@8911
+                &kp R &kp E &kp KP_N1 &kp AT &kp KP_N8 &kp KP_N9 &kp KP_N1 &kp KP_N1
+            >;
+        };
+
         email_1: email_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>; // No requiere parámetros
