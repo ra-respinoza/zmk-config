@@ -7,6 +7,19 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+/macros {
+    hola_macro: hola_macro {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <
+            &macro_press &kp H
+            &macro_tap &kp O
+            &macro_tap &kp L
+            &macro_tap &kp A
+        >;
+    };
+};
+
 / {
         keymap {
                 compatible = "zmk,keymap";
