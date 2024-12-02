@@ -7,15 +7,15 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-
-/ {
-        macro {
+macro {
             id = EMAIL_1;
             bindings = <KC_R KC_O KC_G KC_E KC_R KC_0 KC_E KC_S KC_P KC_I KC_N KC_O KC_S KC_A KC_1 KC_0 KC_AT KC_G KC_M KC_A KC_I KC_L KC_COMMA>;
         
             id = EMAIL_2;
             bindings = <KC_R KC_O KC_G KC_E KC_R KC_D KC_O KC_E KC_S KC_P KC_I KC_N KC_O KC_S KC_A KC_D KC_E KC_V KC_E KC_L KC_O KC_P KC_E KC_AT KC_G KC_M KC_A KC_I KC_L KC_COMMA>;
         };
+
+/ {
         keymap {
                 compatible = "zmk,keymap";
 
