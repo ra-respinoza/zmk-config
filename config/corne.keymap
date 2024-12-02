@@ -8,19 +8,17 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-        bt_clear_combo {
-            timeout-ms = <50>;
-            bindings = <&bt_clear>;
-            key-positions = <0 1>; // Cambia estas posiciones según tu diseño
-        };
-        bt_pair_combo {
-            timeout-ms = <50>;
-            bindings = <&bt_pair>;
-            key-positions = <2 3>; // Cambia estas posiciones según tu diseño
-        };
+combos {
+    compatible = "zmk,combos";
+    bt_clear_combo {
+        timeout-ms = <50>;
+        bindings = <&bt_clear>;
+        key-positions = <0 1>; // Posiciones de las teclas para el combo bt_clear
+    };
+    bt_pair_combo {
+        timeout-ms = <50>;
+        bindings = <&bt_pair>;
+        key-positions = <2 3>; // Posiciones de las teclas para el combo bt_pair
     };
 };
 
