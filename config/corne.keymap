@@ -34,11 +34,11 @@
             bindings = <&kp R &kp O &kp G &kp E &kp R &kp N0 &kp DOT &kp E &kp S &kp P &kp I &kp N &kp O &kp Z &kp A &kp N1 &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
         };
 
-        email_3: email_3 {
+        email_2: email_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp R &kp G &kp E &kp R &kp DOT &kp E &kp S &kp P &kp I &kp N &kp O &kp Z &kp A &kp DOT &kp D &kp E &kp V &kp E &kp L &kp O &kp P &kp E &kp R &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
-            label = "EMAIL_3";
+            bindings = <&none &kp R &kp O &kp G &kp E &kp R &kp DOT &kp E &kp S &kp P &kp I &kp N &kp O &kp Z &kp A &kp DOT &kp D &kp E &kp V &kp E &kp L &kp O &kp P &kp E &kp R &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "EMAIL_2";
         };
     };
 };
@@ -102,7 +102,7 @@
             bindings = <
 &kp TAB    &none  &none     &kp LPAR  &kp RPAR  &kp PIPE     &kp TILDE  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &kp BSPC
 &kp LCTRL  &none  &kp EXCL  &kp LBRC  &kp RBRC  &kp EQUAL    &clave_1   &clave_2  &clave_3  &none     &none      &kp RCTRL
-&kp LSHFT  &none  &none     &kp LBKT  &kp RBKT  &kp AMPS     &email_1   &email_3  &none     &none     &none      &mt RSHFT FSLH
+&kp LSHFT  &none  &none     &kp LBKT  &kp RBKT  &kp AMPS     &email_1   &email_2  &none     &none     &none      &mt RSHFT FSLH
                             &trans    &trans    &trans       &trans     &trans    &trans
             >;
         };
